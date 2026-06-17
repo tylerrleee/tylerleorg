@@ -18,7 +18,7 @@ type Pillar = {
 const pillars: Pillar[] = [
   {
     title: "Cultural Shows",
-    image: { src: "/images/work/cultureshow.jpg", width: 2000, height: 1333 },
+    image: { src: "/images/work/cultureshow1.jpg", width: 2000, height: 1333 },
     stats: [
       "1,400+ attendees",
       "120 volunteers",

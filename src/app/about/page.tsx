@@ -27,7 +27,7 @@ export default function AboutPage() {
           {/* Headshot */}
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl ring-1 ring-black/10">
             <Image
-              src="/images/work/tle-headshot.jpg"
+              src="/images/work/tle-headshot1.jpg"
               alt="Tyler Le"
               fill
               priority
