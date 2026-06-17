@@ -117,7 +117,7 @@ export default function Home() {
         <div className="flex flex-col p-8 border-r border-zinc-100">
           <div className="flex flex-col gap-3 mb-10">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/tylerle-uf/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -127,7 +127,7 @@ export default function Home() {
               </svg>
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/tylerrleee"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
