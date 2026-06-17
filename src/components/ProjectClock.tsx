@@ -135,15 +135,15 @@ export default function ProjectClock({ projects, className }: { projects: Projec
 
             
 
-            {/* Prev / next — frosted glass pills, >=44px touch targets */}
-            <div className="pointer-events-none absolute inset-x-0 bottom-3 z-10 flex items-center justify-center gap-3">
+            {/* Prev / next — frosted glass pills (smaller on mobile, >=44px at lg) */}
+            <div className="pointer-events-none absolute inset-x-0 bottom-3 z-10 flex items-center justify-center gap-2 lg:gap-3">
               <button
                 type="button"
                 onClick={() => goTo(active - 1)}
                 aria-label="Previous project"
-                className="glass-nav pointer-events-auto inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-white/15 text-white transition-colors hover:bg-white/25 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70"
+                className="glass-nav pointer-events-auto inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/30 bg-white/15 text-white transition-colors hover:bg-white/25 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70 lg:h-11 lg:w-11"
               >
-                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}>
+                <svg className="h-3.5 w-3.5 lg:h-4 lg:w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}>
                   <path d="M18 15l-6-6-6 6" />
                 </svg>
               </button>
@@ -151,9 +151,9 @@ export default function ProjectClock({ projects, className }: { projects: Projec
                 type="button"
                 onClick={() => goTo(active + 1)}
                 aria-label="Next project"
-                className="glass-nav pointer-events-auto inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-white/15 text-white transition-colors hover:bg-white/25 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70"
+                className="glass-nav pointer-events-auto inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/30 bg-white/15 text-white transition-colors hover:bg-white/25 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70 lg:h-11 lg:w-11"
               >
-                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}>
+                <svg className="h-3.5 w-3.5 lg:h-4 lg:w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}>
                   <path d="M6 9l6 6 6-6" />
                 </svg>
               </button>
