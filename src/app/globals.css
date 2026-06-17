@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("/fonts/23ed6ab5114b3c4b57abae46cf8a5029.woff2") format("woff2"),
+    url("/fonts/23ed6ab5114b3c4b57abae46cf8a5029.woff") format("woff"),
+    url("/fonts/23ed6ab5114b3c4b57abae46cf8a5029.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-editorial: "PP Editorial New", serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.glass-window {
+  box-shadow: 0 20px 50px -24px rgba(0, 0, 0, 0.35);
+}
+
+.glass-viewport {
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  overscroll-behavior-y: contain;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.glass-viewport::-webkit-scrollbar { display: none; }
+
+.glass-panel { scroll-snap-align: center; }
+
+/* Frosted glass overlays — blur whatever (the project image) sits behind them. */
+.glass-caption,
+.glass-chip,
+.glass-nav {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+/* Fallback for browsers without backdrop-filter: keep overlays legible. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass-caption { background: rgba(0, 0, 0, 0.55); }
+  .glass-chip,
+  .glass-nav { background: rgba(0, 0, 0, 0.45); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glass-viewport { scroll-behavior: auto; }
+}
